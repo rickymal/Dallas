@@ -1,0 +1,13 @@
+{
+    "server": "localhost",
+    "port": 1433,
+    "user": "SA",
+    "database": "<base de dados>",
+    "password": "<senha>",
+    "options": {
+      "enableArithAbort": true,
+      "trustedConnection": true,
+      "encrypt": true,
+      "trustServerCertificate": true
+    }
+}

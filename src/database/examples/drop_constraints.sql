@@ -1,0 +1,2 @@
+use TestDB_08;
+alter table purpose_relashionship drop constraint fk_delete_auditory
