@@ -112,7 +112,7 @@ export async function createRelashionship(purpose_ref_id: number, from: Array<nu
     })
     
     queryBuilder.push('commit')
-    console.log({message: queryBuilder})
+    // consolde.log({message: queryBuilder})
     const result = await request.query(queryBuilder.join("\n"))
     return result.recordset
 }

@@ -14,7 +14,7 @@ app.use(express.json())
 const port = 3000
 
 sql.connect(config).then(async connection => {
-  console.log("Servidor conectado!")
+  // consolde.log("Servidor conectado!")
   const request = connection.request()
   request.query(sql_init_queries)
 
@@ -25,7 +25,7 @@ sql.connect(config).then(async connection => {
 
   app.put('/build_purpose', async (req, res) => {
     const result = req.body
-    console.log({ result })
+    // consolde.log({ result })
     const response = await createPurpose({
       title: result.title, description: result.description,
       status: Number(result.status)
@@ -36,7 +36,7 @@ sql.connect(config).then(async connection => {
 
   app.put('/insert_relashionship', async (req, res) => {
     const body = req.body
-    console.log({ body })
+    // consolde.log({ body })
     await createRelashionship(req.body.master_id, req.body.parent_ids, req.body.children_ids, request)
     res.json(await getAllPurposes(request))
   })
@@ -47,17 +47,17 @@ sql.connect(config).then(async connection => {
 
   app.post('/edit_purpose', async (req, res) => {
     const body = req.body
-    console.log({ body })
+    // consolde.log({ body })
     res.json(await editPurpose({ title: body.content.title, description: body.content.description }, body.purpose_id, request))
 
   })
 
   app.post('/build_box', async (req, res) => {
     const body = req.body
-    console.log({ body })
+    // consolde.log({ body })
     const response = await buildBoxBySingleId(body.before, body.after, request)
-    console.log("Retorno")
-    console.log({ response })
+    // consolde.log("Retorno")
+    // consolde.log({ response })
     res.json(response)
   })
 

@@ -1,9 +1,9 @@
 {
     "server": "localhost",
     "port": 1433,
-    "user": "SA",
-    "database": "<base de dados>",
-    "password": "<senha>",
+    "user": "test",
+    "database": "TestDB_08",
+    "password": "AFew@159753",
     "options": {
       "enableArithAbort": true,
       "trustedConnection": true,
